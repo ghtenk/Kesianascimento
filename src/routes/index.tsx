@@ -224,7 +224,8 @@ function Index() {
               <div className="gold-rule mt-6" />
             </Reveal>
 
-            <ul className="mt-14 grid gap-px overflow-hidden rounded border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+            <ul className="mt-14 grid gap-px overflow-hidden rounded border border-border bg-border sm:grid-cols-2">
+  {services.filter((service) => ["Manutenção", "Remoção"].includes(service.name)).map((service, i) => (
               {services.map((service, i) => (
                 <Reveal
                   as="li"
